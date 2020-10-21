@@ -31,7 +31,7 @@ W <- function(r){
 make_weight_matrix <- function(z,x,omega){
   r <- abs(x-z)/omega
   w <- sapply(r,W)
-  Wz <- w
+  Wz <- diag(w)
   return(Wz)
 }
 
